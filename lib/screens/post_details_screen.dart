@@ -47,7 +47,7 @@ class PostDetailsScreen extends ConsumerWidget {
   Widget _buildPostContent(BuildContext context, Post post) {
     return Container(
       width: double.infinity,
-      color: Colors.white,
+      color: Theme.of(context).colorScheme.surface,
       child: Column(
         children: [
           Padding(
@@ -123,7 +123,7 @@ class PostDetailsScreen extends ConsumerWidget {
     return comments.when(
       data: (comments) {
         return Container(
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.surface,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

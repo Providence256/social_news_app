@@ -216,15 +216,14 @@ class JsonPlaceholderService {
   }
 
   static Future<ApiResponse<User>> getUser(int userId) async {
-    return _get(
-      '/users/$userId',
-      (jsonData) => switch (jsonData) {
+    return _get('/users/$userId', (jsonData) {
+      return switch (jsonData) {
         Map<String, dynamic> userJson => User.fromMap(userJson),
         _ => throw FormatException(
           'Expected user object, got: ${jsonData.runtimeType}',
         ),
-      },
-    );
+      };
+    });
   }
 
   static Future<ApiResponse<List<Comment>>> getCommentByPost(int postId) async {

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:social_media_app/providers/theme_notifier.dart';
 import 'package:social_media_app/screens/feed_screen.dart';
 import 'package:social_media_app/screens/post_details_screen.dart';
+import 'package:social_media_app/screens/user_profile_screen.dart';
 import 'package:social_media_app/services/preferences_service.dart';
 
 void main() async {
@@ -25,6 +26,7 @@ class MainApp extends ConsumerWidget {
       routes: {
         '/': (context) => FeedScreen(),
         '/post-details': (context) => PostDetailsScreen(),
+        '/user-profile': (context) => UserProfileScreen(),
       },
     );
   }
